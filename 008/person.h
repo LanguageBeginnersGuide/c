@@ -1,5 +1,6 @@
-typedef struct Person
+typedef struct
 {
+    char *name;
     int age;
 } Person;
 

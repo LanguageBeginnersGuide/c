@@ -6,6 +6,7 @@
 void modify(Person *person)
 {
     person->age += 1;
+    person->name = "tom";
 }
 
 Person *New_Person()

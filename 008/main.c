@@ -4,21 +4,19 @@
 
 int main(void)
 {
-    Person *persons[5];
+    Person persons[5];
 
-    // ×
-    for (size_t i = 0; i < 5; i++)
+    Person *p;
+
+    p = persons;
+
+    for (p = persons; p < persons + 4; p++)
     {
-        persons[i] = New_Person();
+        p->age = 17;
     }
 
-    for (size_t i = 0; i < 5; i++)
+    for (p = persons; p < persons + 4; p++)
     {
-        modify(persons[i]);
-    }
-
-    for (size_t i = 0; i < 5; i++)
-    {
-        printf("\nage:%d\n", persons[i]->age);
+        printf("\nage:%d\n", p->age);
     }
 }
